@@ -10,7 +10,8 @@
 #import "DetailViewController.h"
 //#import <FrameShellTest/Shell.h>
 #import <FrameShellTest/Shell.h>
-
+//、#import "FMDeviceManager.h"
+#import "MobClick.h"
 
 
 @interface MasterViewController ()
@@ -20,8 +21,43 @@
 
 @implementation MasterViewController
 
+//-(void)initTd
+//{
+//    // 获取设备管理器实例
+//
+//    FMDeviceManager_t *manager = [FMDeviceManager sharedManager];
+//
+//    // 准备SDK初始化参数
+//
+//    NSMutableDictionary *options = [NSMutableDictionary dictionary];
+//
+//    // SDK具有防调试功能，当使用xcode运行时，请取消此行注释，开启调试模式
+//
+//    // 否则使用xcode运行会闪退，(但直接在设备上点APP图标可以正常运行)
+//
+//    // 上线Appstore的版本，请记得删除此行，否则将失去防调试防护功能！
+//
+//     [options setValue:@"allowd" forKey:@"allowd"];  // TODO
+//
+//    // 指定对接同盾的测试环境，正式上线时，请删除或者注释掉此行代码，切换到同盾生产环境
+//
+//    //[options setValue:@"sandbox" forKey:@"env"]; // TODO
+//
+//    // 指定合作方标识
+//
+//    [options setValue:@"nonobank" forKey:@"partner"];
+//
+//    // 使用上述参数进行SDK初始化
+//
+//    manager->initWithOptions(options);
+//}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [self initTd];
+
+    [MobClick startWithAppkey:@"123123"];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 

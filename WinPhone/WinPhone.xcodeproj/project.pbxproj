@@ -15,6 +15,7 @@
 		46AD39D41C36D3E4002A76E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46AD39D31C36D3E4002A76E6 /* Assets.xcassets */; };
 		46AD39D71C36D3E4002A76E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46AD39D51C36D3E4002A76E6 /* LaunchScreen.storyboard */; };
 		46B38ECC1C37CF1E003ED482 /* FrameShellTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B38ECB1C37CF1E003ED482 /* FrameShellTest.framework */; };
+		46B38EDC1C37D7BF003ED482 /* libMobClickLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B38ED91C37D7BF003ED482 /* libMobClickLibrary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,9 @@
 		46AD39D61C36D3E4002A76E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46AD39D81C36D3E4002A76E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46B38ECB1C37CF1E003ED482 /* FrameShellTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FrameShellTest.framework; sourceTree = "<group>"; };
+		46B38ED91C37D7BF003ED482 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
+		46B38EDA1C37D7BF003ED482 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
+		46B38EDB1C37D7BF003ED482 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46B38ECC1C37CF1E003ED482 /* FrameShellTest.framework in Frameworks */,
+				46B38EDC1C37D7BF003ED482 /* libMobClickLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,7 @@
 		46AD39C31C36D3E4002A76E6 /* WinPhone */ = {
 			isa = PBXGroup;
 			children = (
+				46B38ED81C37D7BF003ED482 /* UMAnalytics_Sdk_3.6.4 */,
 				46B38ECB1C37CF1E003ED482 /* FrameShellTest.framework */,
 				46AD39C71C36D3E4002A76E6 /* AppDelegate.h */,
 				46AD39C81C36D3E4002A76E6 /* AppDelegate.m */,
@@ -86,6 +92,16 @@
 				46AD39C51C36D3E4002A76E6 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46B38ED81C37D7BF003ED482 /* UMAnalytics_Sdk_3.6.4 */ = {
+			isa = PBXGroup;
+			children = (
+				46B38ED91C37D7BF003ED482 /* libMobClickLibrary.a */,
+				46B38EDA1C37D7BF003ED482 /* MobClick.h */,
+				46B38EDB1C37D7BF003ED482 /* MobClickSocialAnalytics.h */,
+			);
+			path = UMAnalytics_Sdk_3.6.4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,17 +288,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanghai Nonobank financial information service Co. Ltd. (VGYK7VPF6P)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WinPhone",
 				);
 				INFOPLIST_FILE = WinPhone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WinPhone",
+					"$(PROJECT_DIR)/WinPhone/UMAnalytics_Sdk_3.6.4",
+				);
 				OTHER_CFLAGS = "-fembed-bitcode";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = nonobank.Nonobank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "24bfe222-8c98-4238-bc06-54948a4e8bdc";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -290,17 +315,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanghai Nonobank financial information service Co. Ltd. (VGYK7VPF6P)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WinPhone",
 				);
 				INFOPLIST_FILE = WinPhone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WinPhone",
+					"$(PROJECT_DIR)/WinPhone/UMAnalytics_Sdk_3.6.4",
+				);
 				OTHER_CFLAGS = "-fembed-bitcode";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = nonobank.Nonobank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "24bfe222-8c98-4238-bc06-54948a4e8bdc";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

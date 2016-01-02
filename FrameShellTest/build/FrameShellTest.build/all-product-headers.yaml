@@ -1,0 +1,38 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/guodong/Desktop/FrameShell/FrameShellTest/build/Release-iphoneos/FrameShellTest.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "FrameShellTest-Swift.h",
+          'external-contents': "/Users/guodong/Desktop/FrameShell/FrameShellTest/build/Release-iphoneos/FrameShellTest.framework/Headers/FrameShellTest-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "FrameShellTest.h",
+          'external-contents': "/Users/guodong/Desktop/FrameShell/FrameShellTest/FrameShellTest/FrameShellTest.h"
+        },
+        {
+          'type': 'file',
+          'name': "Shell.h",
+          'external-contents': "/Users/guodong/Desktop/FrameShell/FrameShellTest/FrameShellTest/Shell.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/guodong/Desktop/FrameShell/FrameShellTest/build/Release-iphoneos/FrameShellTest.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/guodong/Desktop/FrameShell/FrameShellTest/build/FrameShellTest.build/Release-iphoneos/FrameShellTest.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

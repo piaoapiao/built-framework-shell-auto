@@ -1,0 +1,1 @@
+ const unsigned char FrameShellTestVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:FrameShellTest  PROJECT:FrameShellTest-1" "\n"; const double FrameShellTestVersionNumber __attribute__ ((used)) = (double)1.;
